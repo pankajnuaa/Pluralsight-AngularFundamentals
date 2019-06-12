@@ -1,0 +1,121 @@
+1 - Course Overview
+==============================
+
+things that We'll learn in this course 
+
+Architecture
+Angular Components
+Resuable Services
+Forms and validation
+API Calls
+Unit test
+Package everything together
+
+2- Getting started with Angular
+=========================================
+high level architecure
+
+Technologies good to have knowdlede of 
+-----------------------------------------
+Basic Node and NPM
+ES2015
+Typescript
+
+https://jcoop.io/angular-practice-exercises/
+
+- Introduction to Typescript
+--------------------------------
+
+Typescript Features
+ - Static Typing  -Interfaces   -Class properties  -public/private Accessibility
+ 
+Static Typing 
+	let name: string
+	let age: number
+	let birthDate: date
+	
+Typescript Interfaces
+	interface ICat{
+	name: string
+	age?: number
+	}
+	
+	let fluffy: ICat
+	
+	!wrong
+	fluffy = {
+	name: 'Fluffy',
+	age: 'seven'   //age is set to string 
+	}
+	
+	corect
+	fluffy ={
+	name: 'Fluffy'  //even though age is not declared its an optional field
+	}
+	
+Class properties
+	
+	class Cat{
+		name: string
+		color: string
+		constructor(name){
+			this.name = name
+		}
+	}
+public/private Accessibility
+
+	class Cat{     //classes are public by default
+		private name: string
+		public speak(){console.log('My name is :'+ this.name)}
+	}
+	
+	let fluffy = new Cat();
+	console.log(fluffy.name) //compile-time error
+	console.speak() //this will work
+	
+	
+	another example
+	class Cat{
+		constructor(private name, private color)
+	}
+	
+	this is same as 
+	
+	class Cat{
+		name: string
+		color: string
+		constructor(name, color){
+		this.name = name;
+		this.color = color;
+		}
+	}
+	
+- Compare angularJS vs Angular
+------------------------------------------------
+
+-Angular Fundamentals
+------------------------------
+loads only required modules
+
+components, service, directive or pipe --> register in a module
+
+
+-Getting started with Angular
+--------------------------------------
+create a new angular project 
+https://github.com/jmcooper/angular-fundamentals-files
+
+- A brief look at the app Module
+------------------------------------
+ 
+ declarations: --> this is all the modules that we add
+ imports --> this is modules we import
+ providers --> this is wwhere we add servies
+ 
+ Accessing Static Files
+ -----------------------------------
+ bootstarp package that was created for the course
+ npm install ngf-bootstrap --save
+ 
+
+	
